@@ -1,0 +1,68 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrl}
+\toprule
+Dataset & Metric & vs. & $\Delta$ (pp) & 95\% CI & Sig.\\
+\midrule
+2Wiki & DriftCE & AuraCoreStruct & -0.22 & [-0.41, -0.04] & ---\\
+2Wiki & DriftCE & BoundedRadiusOnly & -1.51 & [-1.88, -1.14] & \checkmark\\
+2Wiki & DriftCE & FullGraph & -4.86 & [-5.43, -4.26] & \checkmark\\
+2Wiki & DriftCE & KCoreOnly & +3.07 & [+2.60, +3.54] & \checkmark\\
+2Wiki & DriftCE & SemanticPruneOnly & -8.31 & [-8.94, -7.64] & \checkmark\\
+2Wiki & Prec & AuraCoreStruct & +0.40 & [+0.23, +0.56] & \checkmark\\
+2Wiki & Prec & BoundedRadiusOnly & +12.41 & [+12.04, +12.79] & \checkmark\\
+2Wiki & Prec & FullGraph & +19.68 & [+19.15, +20.20] & \checkmark\\
+2Wiki & Prec & KCoreOnly & +5.79 & [+5.39, +6.21] & \checkmark\\
+2Wiki & Prec & SemanticPruneOnly & +21.90 & [+21.34, +22.46] & \checkmark\\
+2Wiki & Rec & AuraCoreStruct & -0.40 & [-0.58, -0.23] & \checkmark\\
+2Wiki & Rec & BoundedRadiusOnly & -8.50 & [-8.78, -8.22] & \checkmark\\
+2Wiki & Rec & FullGraph & -21.27 & [-21.69, -20.85] & \checkmark\\
+2Wiki & Rec & KCoreOnly & -11.89 & [-12.26, -11.50] & \checkmark\\
+2Wiki & Rec & SemanticPruneOnly & -21.59 & [-22.02, -21.16] & \checkmark\\
+2Wiki & SelF1 & AuraCoreStruct & +0.14 & [-0.00, +0.28] & ---\\
+2Wiki & SelF1 & BoundedRadiusOnly & +4.02 & [+3.73, +4.31] & \checkmark\\
+2Wiki & SelF1 & FullGraph & +7.08 & [+6.67, +7.49] & \checkmark\\
+2Wiki & SelF1 & KCoreOnly & -1.87 & [-2.20, -1.55] & \checkmark\\
+2Wiki & SelF1 & SemanticPruneOnly & +9.55 & [+9.11, +10.00] & \checkmark\\
+2Wiki & SelPrec & AuraCoreStruct & +0.34 & [+0.16, +0.52] & \checkmark\\
+2Wiki & SelPrec & BoundedRadiusOnly & +11.88 & [+11.47, +12.28] & \checkmark\\
+2Wiki & SelPrec & FullGraph & +18.63 & [+18.03, +19.21] & \checkmark\\
+2Wiki & SelPrec & KCoreOnly & +5.11 & [+4.70, +5.52] & \checkmark\\
+2Wiki & SelPrec & SemanticPruneOnly & +21.05 & [+20.46, +21.68] & \checkmark\\
+2Wiki & SelRec & AuraCoreStruct & +0.03 & [-0.12, +0.19] & ---\\
+2Wiki & SelRec & BoundedRadiusOnly & -0.30 & [-0.59, -0.01] & ---\\
+2Wiki & SelRec & FullGraph & +0.42 & [+0.01, +0.83] & \checkmark\\
+2Wiki & SelRec & KCoreOnly & -5.43 & [-5.78, -5.10] & \checkmark\\
+2Wiki & SelRec & SemanticPruneOnly & +3.08 & [+2.65, +3.51] & \checkmark\\
+MuSiQue & DriftCE & AuraCoreStruct & +0.31 & [-0.13, +0.73] & ---\\
+MuSiQue & DriftCE & BoundedRadiusOnly & +0.62 & [-0.08, +1.32] & ---\\
+MuSiQue & DriftCE & FullGraph & +0.66 & [-0.23, +1.54] & ---\\
+MuSiQue & DriftCE & KCoreOnly & -1.06 & [-1.71, -0.42] & ---\\
+MuSiQue & DriftCE & SemanticPruneOnly & +0.63 & [-0.34, +1.63] & ---\\
+MuSiQue & Prec & AuraCoreStruct & +0.35 & [+0.10, +0.62] & \checkmark\\
+MuSiQue & Prec & BoundedRadiusOnly & +2.63 & [+2.21, +3.09] & \checkmark\\
+MuSiQue & Prec & FullGraph & +5.71 & [+4.98, +6.47] & \checkmark\\
+MuSiQue & Prec & KCoreOnly & +3.44 & [+2.84, +4.08] & \checkmark\\
+MuSiQue & Prec & SemanticPruneOnly & +6.20 & [+5.45, +6.94] & \checkmark\\
+MuSiQue & Rec & AuraCoreStruct & -0.15 & [-0.45, +0.15] & ---\\
+MuSiQue & Rec & BoundedRadiusOnly & -3.68 & [-4.13, -3.23] & \checkmark\\
+MuSiQue & Rec & FullGraph & -9.56 & [-10.23, -8.91] & \checkmark\\
+MuSiQue & Rec & KCoreOnly & -3.87 & [-4.44, -3.34] & \checkmark\\
+MuSiQue & Rec & SemanticPruneOnly & -9.93 & [-10.65, -9.25] & \checkmark\\
+MuSiQue & SelF1 & AuraCoreStruct & +0.02 & [-0.24, +0.27] & ---\\
+MuSiQue & SelF1 & BoundedRadiusOnly & +0.85 & [+0.43, +1.29] & \checkmark\\
+MuSiQue & SelF1 & FullGraph & +1.54 & [+0.97, +2.14] & \checkmark\\
+MuSiQue & SelF1 & KCoreOnly & +1.22 & [+0.78, +1.66] & \checkmark\\
+MuSiQue & SelF1 & SemanticPruneOnly & +1.76 & [+1.11, +2.41] & \checkmark\\
+MuSiQue & SelPrec & AuraCoreStruct & +0.13 & [-0.19, +0.46] & ---\\
+MuSiQue & SelPrec & BoundedRadiusOnly & +2.10 & [+1.56, +2.66] & \checkmark\\
+MuSiQue & SelPrec & FullGraph & +3.76 & [+2.95, +4.57] & \checkmark\\
+MuSiQue & SelPrec & KCoreOnly & +2.61 & [+2.00, +3.27] & \checkmark\\
+MuSiQue & SelPrec & SemanticPruneOnly & +4.00 & [+3.16, +4.82] & \checkmark\\
+MuSiQue & SelRec & AuraCoreStruct & -0.03 & [-0.30, +0.22] & ---\\
+MuSiQue & SelRec & BoundedRadiusOnly & +0.32 & [-0.13, +0.76] & ---\\
+MuSiQue & SelRec & FullGraph & +0.47 & [-0.14, +1.06] & ---\\
+MuSiQue & SelRec & KCoreOnly & +0.56 & [+0.13, +1.00] & ---\\
+MuSiQue & SelRec & SemanticPruneOnly & +0.69 & [+0.04, +1.35] & ---\\
+\bottomrule
+\end{tabular}
+\caption{AuraCoreFull vs each variant after adversarial updates (paired, final step).}\label{tab:updates}\end{table}

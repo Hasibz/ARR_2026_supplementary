@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Model & Metric & $\Delta$ (pp) & 95\% CI & $p_{\text{adj}}$ & Sig. \\
+\midrule
+SmolLM2-1.7B-Instruct & Unsup & +0.34 & [-0.88, +1.56] & 0.5962 & -- \\
+SmolLM2-1.7B-Instruct & Faith & +0.02 & [-1.05, +1.12] & 0.3074 & -- \\
+Qwen2.5-3B-Instruct & Unsup & +0.33 & [+0.12, +0.58] & 0.0327 & \checkmark \\
+Qwen2.5-3B-Instruct & Faith & +0.26 & [+0.07, +0.48] & 0.0714 & -- \\
+Qwen2.5-7B-Instruct & Unsup & -0.17 & [-0.38, +0.00] & 0.3074 & -- \\
+Qwen2.5-7B-Instruct & Faith & -0.15 & [-0.34, +0.02] & 0.2344 & -- \\
+Phi-3-mini-4k-instruct & Unsup & +0.83 & [+0.25, +1.42] & 0.0327 & \checkmark \\
+Phi-3-mini-4k-instruct & Faith & +0.63 & [+0.15, +1.14] & 0.0039 & \checkmark \\
+\bottomrule
+\end{tabular}
+\caption{Hallucination deltas (mitigated $-$ standard; positive = improvement).}
+\end{table}

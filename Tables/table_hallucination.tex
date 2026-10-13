@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llccc}
+\toprule
+Model & Method & EM & F1 & Unsup \\
+\midrule
+SmolLM2-1.7B-Instruct & mitigated & 1.54 & 9.47 & 84.71 \\
+SmolLM2-1.7B-Instruct & standard & 1.50 & 10.03 & 85.10 \\
+Qwen2.5-3B-Instruct & mitigated & 2.42 & 4.41 & 96.21 \\
+Qwen2.5-3B-Instruct & standard & 2.25 & 4.19 & 96.54 \\
+Qwen2.5-7B-Instruct & mitigated & 6.67 & 9.51 & 95.83 \\
+Qwen2.5-7B-Instruct & standard & 6.83 & 9.72 & 95.67 \\
+Phi-3-mini-4k-instruct & mitigated & 6.75 & 14.35 & 92.79 \\
+Phi-3-mini-4k-instruct & standard & 7.46 & 14.26 & 93.62 \\
+\bottomrule
+\end{tabular}
+\caption{Hallucination by model/mode.}
+\end{table}

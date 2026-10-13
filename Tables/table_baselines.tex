@@ -1,0 +1,27 @@
+\begin{table*}[!htbp]
+\centering
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+ & \multicolumn{4}{c}{Retrieval metric (mean \%)} & \multicolumn{1}{c}{AuraCoreFull $-$} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-6}
+Method & SelPrec & SelRec & SelF1 & OrSel & $\Delta$SelPrec (pp) \\
+\midrule
+\multicolumn{6}{l}{\textit{2WikiMultiHopQA} ($n{=}1{,}000$ subset)} \\
+\midrule
+\textbf{AuraCoreFull}   & \textbf{38.65} & 86.50  & \textbf{47.24} & 80.90 & --- \\
+TopoRAG-like            & 32.18          & 98.00  & 46.48          & 91.20 & $+6.47$\sig \\
+GraphRAG-like           & 24.56          & 100.00 & 38.76          & 92.10 & $+14.09$\sig \\
+RerankedTopK            & 24.56          & 100.00 & 38.76          & 92.10 & $+14.09$\sig \\
+\midrule
+\multicolumn{6}{l}{\textit{MuSiQue} ($n{=}2{,}417$)} \\
+\midrule
+TopoRAG-like            & \textbf{21.90} & \textbf{77.36} & \textbf{32.78} & \textbf{74.47} & $-0.13$\sig \\
+\textbf{AuraCoreFull}   & 21.77          & 74.93          & 31.95          & 70.71          & --- \\
+RerankedTopK            & 19.49          & 75.13          & 30.57          & 69.96          & $+2.28$\sig \\
+GraphRAG-like           & 19.32          & 74.28          & 30.28          & 71.29          & $+2.45$\sig \\
+\bottomrule
+\end{tabular}
+\caption{External baselines. RerankedTopK scores the full graph by cross-encoder and takes the top 10. TopoRAG-like performs BFS up to radius~2 from each anchor, then semantic ranking. GraphRAG-like uses Louvain communities. ``AuraCoreFull $-$'' is the difference in SelPrec in percentage points, with the sign computed as AuraCoreFull minus the row method. \sig\ Holm-adjusted $p<0.05$. On 2Wiki the constraints help; on MuSiQue a radius-only baseline is at least as precise, and we report it as a regime boundary, not a universal win.}
+\label{tab:baselines}
+\end{table*}

@@ -1,0 +1,25 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Model & Metric & $\Delta$ (pp) & 95\% CI & $p_{\text{adj}}$ & Sig. \\
+\midrule
+SmolLM2-1.7B-Instruct & EM & -0.67 & [-3.36, +1.34] & 1.0000 & -- \\
+SmolLM2-1.7B-Instruct & F1 & +0.02 & [-3.23, +3.09] & 1.0000 & -- \\
+SmolLM2-1.7B-Instruct & Faith & +11.94 & [+6.75, +17.48] & 0.0000 & \checkmark \\
+SmolLM2-1.7B-Instruct & Unsup & -12.08 & [-18.12, -6.71] & 0.0017 & \checkmark \\
+Qwen2.5-3B-Instruct & EM & -2.67 & [-6.00, +0.00] & 0.6691 & -- \\
+Qwen2.5-3B-Instruct & F1 & -4.71 & [-8.38, -1.18] & 0.1019 & -- \\
+Qwen2.5-3B-Instruct & Faith & +2.35 & [-1.12, +6.11] & 0.7269 & -- \\
+Qwen2.5-3B-Instruct & Unsup & -2.67 & [-6.67, +1.33] & 0.8236 & -- \\
+Qwen2.5-7B-Instruct & EM & -8.67 & [-14.67, -3.33] & 0.0547 & -- \\
+Qwen2.5-7B-Instruct & F1 & -11.21 & [-17.25, -5.22] & 0.0073 & \checkmark \\
+Qwen2.5-7B-Instruct & Faith & +3.02 & [-0.56, +6.83] & 0.5667 & -- \\
+Qwen2.5-7B-Instruct & Unsup & -3.33 & [-7.33, +0.67] & 0.6691 & -- \\
+Phi-3-mini-4k-instruct & EM & -2.67 & [-7.33, +2.00] & 0.8236 & -- \\
+Phi-3-mini-4k-instruct & F1 & -4.97 & [-10.49, +0.18] & 0.5667 & -- \\
+Phi-3-mini-4k-instruct & Faith & +5.70 & [+1.31, +10.34] & 0.0003 & \checkmark \\
+Phi-3-mini-4k-instruct & Unsup & -5.33 & [-10.67, -0.67] & 0.3251 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Ablation: AuraCoreFull $-$ no\_nli\_gate.}
+\end{table}

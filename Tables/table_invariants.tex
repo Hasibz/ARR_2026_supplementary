@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Benchmark & Divergent & Both $k$-ok & Med.\ Jacc. & Max $|\Delta\deg|$\\
+\midrule
+BA-1000   & 9  & 9  (100\%) & 1.00 & 0\\
+BA-5000   & 2  & 2  (100\%) & 1.00 & 0\\
+BA-10000  & 24 & 8  (33\%)  & 1.00 & 1\\
+BA-50000  & 17 & 17 (100\%) & 1.00 & 0\\
+\midrule
+Total     & 52 & 36 (69\%)  & 1.00 & 1\\
+\bottomrule
+\end{tabular}
+\caption{Invariant verification on the 52 divergent BA audits observed
+across the systems benchmark (3 seeds $\times$ 10 checkpoints $\times$
+4 graph sizes with at least one divergence). ``Both $k$-ok'' counts
+audits in which \emph{both} the maintained core and the exact rebuild
+satisfy $\min_u \deg_H(u) \geq k$ on the core's internal edges;
+anchors are counted as regular nodes in this check. Divergent pairs
+are near-misses on the tie-broken BFS frontier (median Jaccard 1.00,
+max internal-degree difference 1), with one outlier at BA-10000 where
+the density check fails on at least one core in most divergent cases.
+We do not diagnose that outlier here. An earlier version of this table
+included a radius column computed against an arbitrary pivot rather
+than the anchor; that column is dropped.}
+\label{tab:invariants}
+\end{table}
