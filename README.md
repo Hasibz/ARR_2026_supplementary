@@ -13,36 +13,36 @@ embedded as constants in `code/`.
 ## 1. Bundle layout
 
 supplementary/
-├── README.md                     ← this file
-├── code/                         ← pipeline + analysis scripts (anonymized)
+├── README.md                  <- this file
+├── code/                      <- pipeline + analysis scripts (anonymized)
 ├── figures/
-│   ├── fig_sig_precision.pdf     ← source of main-paper Figure 3
-│   └── fig01..fig10.png          ← sources of Appendix Figures 5–14
-├── tables/                       ← LaTeX sources of Appendix Tables 3–12
+│   ├── fig_sig_precision.pdf  <- source of main-paper Figure 3
+│   └── fig01..fig10.png       <- sources of Appendix Figures 5-14
+├── tables/                    <- LaTeX sources of Appendix Tables 3-12
 │   └── table_{static,sig_static,sig_qa,sig_abl,ablations,
-│              freerider,hallucination}.tex
+│                 freerider,hallucination}.tex
 ├── models/
-│   ├── drift_rerank.pt           ← state_dict, drift reranker MLP
-│   └── meta_ctrl.pt              ← state_dict, meta-controller MLP
+│   ├── drift_rerank.pt        <- state_dict, drift reranker MLP
+│   └── meta_ctrl.pt           <- state_dict, meta-controller MLP
 └── outputs/
-    ├── summary.json              ← machine-readable headline numbers
+    ├── summary.json           <- machine-readable headline numbers
     ├── significance/
-    │   ├── sig_static.csv        ← 60 paired tests (Table 1 / Fig. 3)
-    │   ├── sig_qa.csv            ← hallucination deltas (mitigated−standard)
-    │   ├── sig_ablations.csv     ← NLI-gate ablation (Table 9)
-    │   └── B_2wiki_significance.csv ← paired tests for Table 2, 2Wiki column
+    │   ├── sig_static.csv     <- 60 paired tests (Table 1 / Fig. 3)
+    │   ├── sig_qa.csv         <- hallucination deltas (mitigated-standard)
+    │   ├── sig_ablations.csv  <- NLI-gate ablation (Table 9)
+    │   └── B_2wiki_significance.csv <- paired tests for Table 2, 2Wiki column
     └── per_example/
-        ├── 2Wiki_static.csv      ← 12,576 × 6 variants
-        ├── MuSiQue_static.csv    ← 2,417 × 6 variants
-        ├── 2Wiki_dyn.csv         ← adversarial-update states (2Wiki)
-        ├── MuSiQue_dyn.csv       ← adversarial-update states (MuSiQue)
-        ├── MuSiQue_qa.csv        ← downstream, MuSiQue (all 6 variants)
-        ├── MuSiQue_ablations.csv ← component ablations
-        ├── B_2wiki_downstream.csv← downstream, 2Wiki (Table 2, 2Wiki column)
-        ├── C_invariants.csv      ← density-invariant audits (Table 8)
-        │                           (original export name: C_invarants.csv)
-        ├── free.csv              ← free-rider benchmark (n=300)
-        └── scal.csv              ← BA scaling / systems timings
+        ├── 2Wiki_static.csv   <- 12,576 × 6 variants
+        ├── MuSiQue_static.csv <- 2,417 × 6 variants
+        ├── 2Wiki_dyn.csv      <- adversarial-update states (2Wiki)
+        ├── MuSiQue_dyn.csv    <- adversarial-update states (MuSiQue)
+        ├── MuSiQue_qa.csv     <- downstream, MuSiQue (all 6 variants)
+        ├── MuSiQue_ablations.csv <- component ablations
+        ├── B_2wiki_downstream.csv<- downstream, 2Wiki (Table 2, 2Wiki column)
+        ├── C_invariants.csv   <- density-invariant audits (Table 8)
+        │                         (original export name: C_invarants.csv)
+        ├── free.csv           <- free-rider benchmark (n=300)
+        └── scal.csv           <- BA scaling / systems timings
 
 ## 2. File → paper element map
 
